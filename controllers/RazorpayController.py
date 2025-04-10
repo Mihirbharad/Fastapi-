@@ -51,7 +51,7 @@ async def create_order(data: CreateOrderRequest):
 
 async def verify_order(data: VerifyOrderRequest):
     try:
-        secret = "RMDrXtNPRQu2rELYPFF0Mlbl"
+        RMDrXtNPRQu2rELYPFF0Mlblsecret = ""
         generated_signature = hmac.new(
             key=bytes(secret, 'utf-8'),
             msg=bytes(data.razorpay_order_id + "|" + data.razorpay_payment_id, 'utf-8'),
