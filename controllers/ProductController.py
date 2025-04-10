@@ -112,7 +112,7 @@ async def get_products():
 
             seller = await user_collection.find_one({"_id": ObjectId(prod["seller_id"])})
             if seller:
-                prod["seller"] = convert_objectid_to_str(seller)  # Convert vendor_id fields
+                prod["seller"] = convert_objectid_to_str(seller)  # Convert vendor_id fields vendor
 
         return [ProductOut(**product) for product in products]
 

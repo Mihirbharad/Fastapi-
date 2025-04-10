@@ -7,6 +7,7 @@ import bcrypt
 from utils.SendMail import send_mail
 
 
+
 async def addUser(user:User):
     user.role_id = ObjectId(user.role_id)
     print("after type cast",user.role_id)
